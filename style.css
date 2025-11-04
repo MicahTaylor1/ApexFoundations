@@ -25,21 +25,21 @@ body {
   line-height: 1.4;
 }
 
+/* Centered Header Layout */
 .nav-bar {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
   padding: 12px 5%;
   background-color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  flex-wrap: wrap;
-  position: relative;
 }
 
 .logo-section {
   display: flex;
   align-items: center;
   gap: 10px;
+  justify-content: flex-start;
 }
 
 .logo-bg {
@@ -56,20 +56,12 @@ body {
   width: auto;
 }
 
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: #0b3558;
-}
-
+/* Nav Links */
 nav {
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  gap: 25px;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 nav a {
@@ -84,7 +76,9 @@ nav a.active {
   color: #f7941d;
 }
 
+/* Call Button */
 .call-now {
+  justify-self: end;
   background-color: #f7941d;
   color: white;
   padding: 10px 15px;
@@ -97,6 +91,16 @@ nav a.active {
 
 .call-now:hover {
   background-color: #d97c14;
+}
+
+/* Menu Button (Hidden Desktop) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #0b3558;
 }
 
 /* ==============================
@@ -348,6 +352,7 @@ footer {
 /* Tablets and below */
 @media (max-width: 900px) {
   .nav-bar {
+    display: flex;
     flex-direction: column;
     align-items: stretch;
   }
