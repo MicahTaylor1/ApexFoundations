@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Apex Foundation Solutions</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Reuse header -->
+  <header>
+    <div class="top-bar">
+      Resolving Your Issue Permanently Rather Than Providing A Short-Term Solution And Maintenance
+    </div>
+    <div class="nav-bar">
+      <div class="logo-section">
+        <div class="logo-bg">
+          <img src="images/logo.png" alt="Apex Logo" class="logo" />
+        </div>
+        <button id="menuToggle" class="menu-toggle">☰</button>
+      </div>
+      <nav id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="#" id="contactLink">Contact Us</a>
+      </nav>
+      <a href="tel:9188294414" class="call-now">📞 Call Now (918) 829-4414</a>
+    </div>
+  </header>
+
+  <!-- PAGE CONTENT -->
+  <section class="page-section">
+    <h1>About Apex Foundation Solutions</h1>
+    <p>
+      Apex Foundation Solutions has proudly served homeowners throughout Oklahoma and surrounding regions.
+      Our mission is to provide permanent, reliable foundation repair using modern engineering and experienced crews.
+    </p>
+
+    <h2>Our Values</h2>
+    <ul>
+      <li>Integrity and honesty in every job</li>
+      <li>Permanent structural solutions, not temporary fixes</li>
+      <li>Customer satisfaction and clear communication</li>
+    </ul>
+  </section>
+
+  <!-- Reuse footer -->
+  <footer>
+    <p>© 2025 Apex Foundation Solutions. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+    menuToggle.onclick = () => navMenu.classList.toggle("active");
+  </script>
+</body>
+</html>
