@@ -1,97 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About - Apex Foundation Solutions</title>
-  <link rel="stylesheet" href="style.css" />
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Apex Foundation Solutions</title>
+	<link rel="icon" type="image/png" href="images/icon.png">
+	<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="top-bar">
-      Resolving Your Issue Permanently Rather Than Providing A Short-Term Solution And Maintenance
-    </div>
-    <div class="nav-bar">
-      <div class="logo-section">
-        <div class="logo-bg">
-          <img src="images/logo.png" alt="Apex Logo" class="logo" />
-        </div>
-        <button id="menuToggle" class="menu-toggle">☰</button>
-      </div>
-      <nav id="navMenu">
-        <a href="index.html">Home</a>
-        <a href="about.html" class="active">About</a>
-        <a href="services.html">Services</a>
-        <a href="testimonials.html">Testimonials</a>
-        <a href="#" id="contactLink">Contact Us</a>
-      </nav>
-      <a href="tel:9188294414" class="call-now">📞 Call Now (918) 829-4414</a>
-    </div>
-  </header>
+	<header>
+		<div class="top-bar">
+			Resolving Your Issue Permanently Rather Than Providing A Short-Term Solution And Maintenance
+		</div>
+		<div class="nav-bar">
+			<div class="logo-section">
+				<div class="logo-bg">
+					<img src="images/logo.png" alt="Apex Logo" class="logo" />
+				</div>
+				<button id="menuToggle" class="menu-toggle">☰</button>
+			</div>
+			<nav id="navMenu">
+				<a href="index.html">Home</a>
+				<a href="about.html" class="active">About</a>
+				<a href="services.html">Services</a>
+				<a href="testimonials.html">Testimonials</a>
+				<a href="#" id="contactLink">Contact Us</a>
+			</nav>
+			<a href="tel:9188294414" class="call-now">📞 Call Now (918) 829-4414</a>
+		</div>
+	</header>
 
-  <section class="page-section">
-    <h1>About Apex Foundation Solutions</h1>
-    <p class="note">(Example content for demonstration purposes only)</p>
+	<section class="page-section">
+		<h1>About Apex Foundation Solutions</h1>
+		<p class="note">(Example content for demonstration purposes only)</p>
 
-    <p>
-      Apex Foundation Solutions is a trusted name in residential and commercial foundation repair.
-      With decades of combined experience, we take pride in providing long-lasting, structural
-      solutions — not quick fixes. Our team operates with professionalism, integrity, and a
-      commitment to your peace of mind.
-    </p>
+		<p>
+			Apex Foundation Solutions is a trusted name in residential and commercial foundation repair.
+			With decades of combined experience, we take pride in providing long-lasting, structural
+			solutions — not quick fixes. Our team operates with professionalism, integrity, and a
+			commitment to your peace of mind.
+		</p>
 
-    <h2>Our Mission</h2>
-    <p>
-      To deliver reliable, engineering-grade foundation repair that permanently restores the
-      safety, comfort, and value of your property.
-    </p>
+		<h2>Our Mission</h2>
+		<p>
+			To deliver reliable, engineering-grade foundation repair that permanently restores the
+			safety, comfort, and value of your property.
+		</p>
 
-    <h2>Our Values</h2>
-    <ul>
-      <li><strong>Integrity:</strong> Honest assessments and transparent pricing.</li>
-      <li><strong>Quality:</strong> Using proven materials and repair systems designed to last.</li>
-      <li><strong>Customer Focus:</strong> Communication and respect from start to finish.</li>
-    </ul>
+		<h2>Our Values</h2>
+		<ul>
+			<li><strong>Integrity:</strong> Honest assessments and transparent pricing.</li>
+			<li><strong>Quality:</strong> Using proven materials and repair systems designed to last.</li>
+			<li><strong>Customer Focus:</strong> Communication and respect from start to finish.</li>
+		</ul>
 
-    <h2>Why Choose Apex?</h2>
-    <p>
-      We understand how stressful foundation issues can be. Our certified inspectors carefully
-      evaluate your property and provide a detailed plan of action. From small residential
-      adjustments to large-scale structural reinforcement, Apex Foundation Solutions delivers
-      consistent results you can trust.
-    </p>
-  </section>
+		<h2>Why Choose Apex?</h2>
+		<p>
+			We understand how stressful foundation issues can be. Our certified inspectors carefully
+			evaluate your property and provide a detailed plan of action. From small residential
+			adjustments to large-scale structural reinforcement, Apex Foundation Solutions delivers
+			consistent results you can trust.
+		</p>
+	</section>
 
-    <footer>
-    <p>© 2025 Apex Foundation Solutions. All Rights Reserved.</p>
-  </footer>
+	<footer>
+		<p>© 2025 Apex Foundation Solutions. All Rights Reserved.</p>
+	</footer>
 
-  <!-- Contact Popup -->
-  <div id="contactPopup" class="popup">
-    <div class="popup-content">
-      <span class="close">&times;</span>
-      <h2>Contact Us</h2>
-      <form id="contactForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" required />
+	<!-- Contact Popup -->
+<div id="contactPopup" class="popup">
+  <div class="popup-content">
+    <span class="close">&times;</span>
+    <h2>Contact Us</h2>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" required />
+    <!-- Formspree contact form -->
+    <form id="contactForm" action="https://formspree.io/f/xnnokygj" method="POST">
+      <label for="name">Name:</label>
+      <input 
+        type="text" 
+        id="name" 
+        name="name" 
+        placeholder="Your name" 
+        required 
+      />
 
-        <label for="message">Message:</label>
-        <textarea id="message" rows="4" required></textarea>
+      <label for="email">Email:</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        placeholder="your@email.com" 
+        required 
+      />
 
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
+      <label for="message">Message:</label>
+      <textarea 
+        id="message" 
+        name="message" 
+        placeholder="How can we help you?" 
+        rows="4" 
+        required
+      ></textarea>
+
+      <!-- Optional redirect after submit -->
+      <!-- <input type="hidden" name="_redirect" value="https://yourdomain.com/thankyou.html" /> -->
+
+      <button type="submit">Send Message</button>
+    </form>
   </div>
+</div>
 
-  <script src="contact.js"></script>
 
-  <script>
-    const menuToggle = document.getElementById("menuToggle");
-    const navMenu = document.getElementById("navMenu");
-    menuToggle.onclick = () => navMenu.classList.toggle("active");
-  </script>
+	<script src="contact.js"></script>
+
+	<script>
+		const menuToggle = document.getElementById("menuToggle");
+		const navMenu = document.getElementById("navMenu");
+		menuToggle.onclick = () => navMenu.classList.toggle("active");
+	</script>
 </body>
 </html>

@@ -1,39 +1,55 @@
-// contact.js — shared popup logic for all pages
-
-// Wait until DOM is ready
 document.addEventListener("DOMContentLoaded", function() {
-  const popup = document.getElementById("contactPopup");
-  const contactLinks = document.querySelectorAll("#contactLink");
-  const closeBtn = document.querySelector(".close");
+	const popup = document.getElementById("contactPopup");
+	const contactLinks = document.querySelectorAll("#contactLink");
+	const closeBtn = document.querySelector(".close");
 
-  // Open popup when any "Contact Us" link is clicked
-  contactLinks.forEach(link => {
-    link.addEventListener("click", e => {
-      e.preventDefault();
-      popup.style.display = "flex";
-    });
-  });
+	contactLinks.forEach(link => {
+		link.addEventListener("click", e => {
+			e.preventDefault();
+			popup.style.display = "flex";
+		});
+	});
 
-  // Close popup
-  closeBtn.addEventListener("click", () => {
-    popup.style.display = "none";
-  });
+	closeBtn.addEventListener("click", () => {
+		popup.style.display = "none";
+	});
 
-  // Close when clicking outside of popup
-  window.addEventListener("click", event => {
-    if (event.target === popup) {
-      popup.style.display = "none";
-    }
-  });
+	window.addEventListener("click", event => {
+		if (event.target === popup) {
+			popup.style.display = "none";
+		}
+	});
 
-  // Handle form submission (Formspree or mailto)
-  const contactForm = document.getElementById("contactForm");
-  if (contactForm) {
-    contactForm.addEventListener("submit", e => {
-      e.preventDefault();
-      alert("Thank you! Your message has been sent. (Form example only)");
-      popup.style.display = "none";
-      contactForm.reset();
-    });
-  }
+	const contactForm = document.getElementById("contactForm");
+	if (contactForm) {
+		contactForm.addEventListener("submit", async e => {
+			e.preventDefault();
+
+			const data = {
+				name: document.getElementById("name").value,
+				email: document.getElementById("email").value,
+				message: document.getElementById("message").value,
+				timestamp: new Date().toISOString()
+			};
+
+			try {
+				const res = await fetch("/save-client", {
+					method: "POST",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify(data)
+				});
+
+				if (res.ok) {
+					alert("Your message was saved successfully!");
+					contactForm.reset();
+					popup.style.display = "none";
+				} else {
+					alert("Error saving your message.");
+				}
+			} catch (err) {
+				alert("Server connection failed.");
+				console.error(err);
+			}
+		});
+	}
 });

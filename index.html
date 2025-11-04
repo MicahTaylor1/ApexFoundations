@@ -1,129 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apex Foundation Solutions</title>
-  <link rel="stylesheet" href="style.css" />
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Apex Foundation Solutions</title>
+	<link rel="icon" type="image/png" href="images/icon.png">
+	<link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <header>
-    <div class="top-bar">
-      Resolving Your Issue Permanently Rather Than Providing A Short-Term Solution And Maintenance
-    </div>
-    <div class="nav-bar">
-      <div class="logo-section">
-        <div class="logo-bg">
-          <img src="images/logo.png" alt="Apex Logo" class="logo" />
-        </div>
-        <button id="menuToggle" class="menu-toggle">☰</button>
-      </div>
-      <nav id="navMenu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="testimonials.html">Testimonials</a>
-        <a href="#" id="contactLink">Contact Us</a>
-      </nav>
-      <a href="tel:9188294414" class="call-now">📞 Call Now (918) 829-4414</a>
-    </div>
-  </header>
+	<header>
+		<div class="top-bar">
+			Resolving Your Issue Permanently Rather Than Providing A Short-Term Solution And Maintenance
+		</div>
+		<div class="nav-bar">
+			<div class="logo-section">
+				<div class="logo-bg">
+					<img src="images/logo.png" alt="Apex Logo" class="logo" />
+				</div>
+				<button id="menuToggle" class="menu-toggle">☰</button>
+			</div>
+			<nav id="navMenu">
+				<a href="index.html">Home</a>
+				<a href="about.html">About</a>
+				<a href="services.html">Services</a>
+				<a href="testimonials.html">Testimonials</a>
+				<a href="#" id="contactLink">Contact Us</a>
+			</nav>
+			<a href="tel:9188294414" class="call-now">📞 Call Now (918) 829-4414</a>
+		</div>
+	</header>
 
-  <section class="hero">
-    <div class="overlay">
-      <div class="hero-content">
-        <div class="image-box">
-          <img src="images/background.png" alt="Homeowners Happy" class="home-img" />
-          <p>Serving Tulsa, Oklahoma</p>
-        </div>
-        <div class="text-box">
-          <h1>
-            Secure Your Home’s Future Today with Reliable, Expert Foundation Repair –
-            Contact Us Now for a Free Consultation!
-          </h1>
-          <p>
-            Say Goodbye Once And For All to Cracked And Bowed Walls, Sticking Doors, Squeaky Uneven Floors,
-            Moisture Issues, Mold and Musky Odors.
-          </p>
-          <button id="openPopup">📋 Get Your Free Quote Now</button>
-        </div>
-      </div>
-    </div>
-  </section>
+	<section class="hero">
+		<div class="overlay">
+			<div class="hero-content">
+				<div class="image-box">
+					<img src="images/background.png" alt="Homeowners Happy" class="home-img" />
+					<p>Serving Tulsa, Oklahoma</p>
+				</div>
+				<div class="text-box">
+					<h1>
+						Secure Your Home’s Future Today with Reliable, Expert Foundation Repair –
+						Contact Us Now for a Free Consultation!
+					</h1>
+					<p>
+						Say Goodbye Once And For All to Cracked And Bowed Walls, Sticking Doors, Squeaky Uneven Floors,
+						Moisture Issues, Mold and Musky Odors.
+					</p>
+					<button id="openPopup">📋 Get Your Free Quote Now</button>
+				</div>
+			</div>
+		</div>
+	</section>
 
-  <section class="testimonials">
-    <div class="testimonial">
-      <h3>Highly Recommend!</h3>
-      <p>
-        Apex Foundation Solutions is the best in the business. They were prompt, professional,
-        and delivered outstanding results. I highly recommend their services.
-      </p>
-    </div>
-    <div class="testimonial">
-      <h3>Great Service!</h3>
-      <p>
-        I had a wonderful experience with Chris at Apex Foundation Solutions. Excellent communication
-        and professional repair work throughout the process. Highly recommended!
-      </p>
-    </div>
-    <div class="testimonial">
-      <h3>Impressive Work</h3>
-      <p>
-        They provided top-notch foundation repair services and peace of mind for the future.
-        Exceptional work all around.
-      </p>
-    </div>
-  </section>
+	<section class="testimonials">
+		<div class="testimonial">
+			<h3>Highly Recommend!</h3>
+			<p>
+				Apex Foundation Solutions is the best in the business. They were prompt, professional,
+				and delivered outstanding results. I highly recommend their services.
+			</p>
+		</div>
+		<div class="testimonial">
+			<h3>Great Service!</h3>
+			<p>
+				I had a wonderful experience with Chris at Apex Foundation Solutions. Excellent communication
+				and professional repair work throughout the process. Highly recommended!
+			</p>
+		</div>
+		<div class="testimonial">
+			<h3>Impressive Work</h3>
+			<p>
+				They provided top-notch foundation repair services and peace of mind for the future.
+				Exceptional work all around.
+			</p>
+		</div>
+	</section>
 
-  <footer>
-    <p>© 2025 Apex Foundation Solutions. All Rights Reserved.</p>
-  </footer>
+	<footer>
+		<p>© 2025 Apex Foundation Solutions. All Rights Reserved.</p>
+	</footer>
 
-  <!-- Contact Popup -->
-  <div id="contactPopup" class="popup">
+	<!-- Contact Popup -->
+<div id="contactPopup" class="popup">
   <div class="popup-content">
     <span class="close">&times;</span>
     <h2>Contact Us</h2>
-    <form id="contactForm">
-    <label for="name">Name:</label>
-    <input type="text" id="name" required />
-    <label for="email">Email:</label>
-    <input type="email" id="email" required />
 
-    <label for="message">Message:</label>
-    <textarea id="message" rows="4" required></textarea>
+    <!-- Formspree contact form -->
+    <form id="contactForm" action="https://formspree.io/f/xnnokygj" method="POST">
+      <label for="name">Name:</label>
+      <input 
+        type="text" 
+        id="name" 
+        name="name" 
+        placeholder="Your name" 
+        required 
+      />
 
-    <button type="submit">Send Message</button>
+      <label for="email">Email:</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        placeholder="your@email.com" 
+        required 
+      />
+
+      <label for="message">Message:</label>
+      <textarea 
+        id="message" 
+        name="message" 
+        placeholder="How can we help you?" 
+        rows="4" 
+        required
+      ></textarea>
+
+      <!-- Optional redirect after submit -->
+      <!-- <input type="hidden" name="_redirect" value="https://yourdomain.com/thankyou.html" /> -->
+
+      <button type="submit">Send Message</button>
     </form>
   </div>
-  </div>
-  <script src="contact.js"></script>
+</div>
 
-  <script>
-    const popup = document.getElementById("contactPopup");
-    const openBtn = document.getElementById("openPopup");
-    const contactLink = document.getElementById("contactLink");
-    const closeBtn = document.querySelector(".close");
-    const menuToggle = document.getElementById("menuToggle");
-    const navMenu = document.getElementById("navMenu");
 
-    // Popup behavior
-    openBtn.onclick = contactLink.onclick = function () {
-      popup.style.display = "flex";
-    };
-    closeBtn.onclick = function () {
-      popup.style.display = "none";
-    };
-    window.onclick = function (event) {
-      if (event.target === popup) {
-        popup.style.display = "none";
-      }
-    };
+	<script src="contact.js"></script>
 
-    // Mobile menu toggle
-    menuToggle.onclick = function () {
-      navMenu.classList.toggle("active");
-    };
-  </script>
+	<script>
+		const popup = document.getElementById("contactPopup");
+		const openBtn = document.getElementById("openPopup");
+		const contactLink = document.getElementById("contactLink");
+		const closeBtn = document.querySelector(".close");
+		const menuToggle = document.getElementById("menuToggle");
+		const navMenu = document.getElementById("navMenu");
+
+		// Popup behavior
+		openBtn.onclick = contactLink.onclick = function () {
+			popup.style.display = "flex";
+		};
+		closeBtn.onclick = function () {
+			popup.style.display = "none";
+		};
+		window.onclick = function (event) {
+			if (event.target === popup) {
+				popup.style.display = "none";
+			}
+		};
+
+		// Mobile menu toggle
+		menuToggle.onclick = function () {
+			navMenu.classList.toggle("active");
+		};
+	</script>
 </body>
 </html>
