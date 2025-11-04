@@ -1,17 +1,28 @@
+/* ------------------- */
+/*  GLOBAL STYLES      */
+/* ------------------- */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
   background-color: #fff;
   color: #222;
+  overflow-x: hidden; /* prevents horizontal scroll */
 }
 
-/* --- HEADER --- */
+/* ------------------- */
+/*  HEADER             */
+/* ------------------- */
 .top-bar {
   background-color: #0b3558;
   color: white;
   text-align: center;
   padding: 8px;
   font-size: 0.9rem;
+  line-height: 1.4;
 }
 
 .nav-bar {
@@ -22,6 +33,7 @@ body {
   background-color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   flex-wrap: wrap;
+  position: relative;
 }
 
 .logo-section {
@@ -32,12 +44,15 @@ body {
 
 .logo-bg {
   background-color: #e8eef5;
-  border-radius: 12px;
-  padding: 10px;
+  border-radius: 15px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo {
-  height: 80px;
+  height: 70px;
   width: auto;
 }
 
@@ -71,21 +86,25 @@ nav a {
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.2s ease;
+  white-space: nowrap;
 }
 
 .call-now:hover {
   background-color: #d97c14;
 }
 
-/* --- HERO --- */
+/* ------------------- */
+/*  HERO SECTION       */
+/* ------------------- */
 .hero {
   background: url("images/background.png") center/cover no-repeat;
   color: white;
+  text-align: center;
 }
 
 .overlay {
   background: rgba(0, 30, 60, 0.7);
-  padding: 60px 5%;
+  padding: 50px 5%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,10 +112,10 @@ nav a {
 
 .hero-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  max-width: 1100px;
+  gap: 30px;
+  max-width: 1000px;
   width: 100%;
 }
 
@@ -106,16 +125,18 @@ nav a {
 
 .image-box img {
   width: 100%;
-  max-width: 280px;
+  max-width: 300px;
   border-radius: 8px;
 }
 
-.text-box {
-  max-width: 550px;
+.image-box p {
+  margin-top: 10px;
+  font-size: 0.9rem;
 }
 
 .text-box h1 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  line-height: 1.4;
   margin-bottom: 10px;
 }
 
@@ -139,7 +160,9 @@ nav a {
   background-color: #d97c14;
 }
 
-/* --- TESTIMONIALS --- */
+/* ------------------- */
+/*  TESTIMONIALS       */
+/* ------------------- */
 .testimonials {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -155,7 +178,9 @@ nav a {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-/* --- FOOTER --- */
+/* ------------------- */
+/*  FOOTER             */
+/* ------------------- */
 footer {
   text-align: center;
   background-color: #0b3558;
@@ -163,7 +188,9 @@ footer {
   padding: 15px 0;
 }
 
-/* --- POPUP --- */
+/* ------------------- */
+/*  POPUP FORM         */
+/* ------------------- */
 .popup {
   display: none;
   position: fixed;
@@ -222,30 +249,25 @@ footer {
   font-size: 22px;
 }
 
-/* --- RESPONSIVE BREAKPOINTS --- */
+/* ------------------- */
+/*  RESPONSIVE FIXES   */
+/* ------------------- */
+
+/* Tablets and below */
 @media (max-width: 900px) {
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .text-box h1 {
-    font-size: 1.3rem;
-  }
-
   .nav-bar {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
   }
 
-  .call-now {
-    align-self: center;
-    margin-top: 10px;
+  .menu-toggle {
+    display: block;
   }
 
   nav {
     display: none;
     flex-direction: column;
+    align-items: flex-start;
     width: 100%;
     background: #e8eef5;
     border-radius: 8px;
@@ -257,8 +279,30 @@ footer {
     display: flex;
   }
 
-  .menu-toggle {
-    display: block;
+  nav a {
+    padding: 10px;
+    width: 100%;
+    border-bottom: 1px solid #cdd6df;
+  }
+
+  .call-now {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    padding: 12px 0;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-box h1 {
+    font-size: 1.2rem;
+  }
+
+  .text-box p {
+    font-size: 0.95rem;
   }
 
   .overlay {
@@ -266,13 +310,18 @@ footer {
   }
 }
 
+/* Phones */
 @media (max-width: 600px) {
   .logo {
     height: 60px;
   }
 
   .text-box h1 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+  }
+
+  .text-box p {
+    font-size: 0.9rem;
   }
 
   .text-box button {
