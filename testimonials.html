@@ -1,15 +1,67 @@
-<section class="page-section">
-  <h1>What Our Customers Say</h1>
-  <div class="testimonials">
-    <div class="testimonial">
-      <h3>“Professional and Reliable!”</h3>
-      <p>Chris and the Apex team repaired our basement wall perfectly. The work was done fast and clean.</p>
-      <strong>– Sarah M., Tulsa</strong>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testimonials - Apex Foundation Solutions</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      Resolving Your Issue Permanently Rather Than Providing A Short-Term Solution And Maintenance
     </div>
-    <div class="testimonial">
-      <h3>“Great Communication”</h3>
-      <p>They kept me informed throughout the process and solved a long-standing moisture problem under my home.</p>
-      <strong>– Brian K., Broken Arrow</strong>
+    <div class="nav-bar">
+      <div class="logo-section">
+        <div class="logo-bg">
+          <img src="images/logo.png" alt="Apex Logo" class="logo" />
+        </div>
+        <button id="menuToggle" class="menu-toggle">☰</button>
+      </div>
+      <nav id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html" class="active">Testimonials</a>
+        <a href="#" id="contactLink">Contact Us</a>
+      </nav>
+      <a href="tel:9188294414" class="call-now">📞 Call Now (918) 829-4414</a>
     </div>
-  </div>
-</section>
+  </header>
+
+  <section class="page-section">
+    <h1>What Our Customers Say</h1>
+    <p class="note">(Example testimonials for demonstration purposes only)</p>
+
+    <div class="testimonials">
+      <div class="testimonial">
+        <h3>“Professional and Reliable!”</h3>
+        <p>Chris and the Apex team repaired our basement wall perfectly. The work was done fast and clean.</p>
+        <strong>– Sarah M., Tulsa</strong>
+      </div>
+
+      <div class="testimonial">
+        <h3>“Great Communication”</h3>
+        <p>They kept me informed throughout the process and solved a long-standing moisture problem under my home.</p>
+        <strong>– Brian K., Broken Arrow</strong>
+      </div>
+
+      <div class="testimonial">
+        <h3>“Outstanding Service!”</h3>
+        <p>The crew was professional, polite, and on time. The foundation issues were resolved for good.</p>
+        <strong>– Emily R., Owasso</strong>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Apex Foundation Solutions. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+    menuToggle.onclick = () => navMenu.classList.toggle("active");
+  </script>
+</body>
+</html>
