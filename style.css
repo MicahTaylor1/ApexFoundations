@@ -23,8 +23,23 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+/* Logo with background */
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.logo-bg {
+    background-color: #e8eef5;
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .logo {
-    height: 60px;
+    height: 80px;
 }
 
 .nav-bar nav a {
@@ -41,6 +56,11 @@ body {
     border-radius: 4px;
     text-decoration: none;
     font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.call-now:hover {
+    background-color: #d97c14;
 }
 
 /* Hero Section */
@@ -99,6 +119,7 @@ body {
     color: white;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
 .text-box button:hover {
